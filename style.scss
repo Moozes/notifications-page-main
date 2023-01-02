@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$mobile: calc(375rem / 16);
+$desktop: calc(1440rem / 16);
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+$white: hsl(0, 0%, 100%);
+
+$very-light-grayish-blue: hsl(210, 60%, 98%);
+
+$light-grayish-blue-1: hsl(211, 68%, 94%);
+$light-grayish-blue-2: hsl(205, 33%, 90%);
+$grayish-blue: hsl(219, 14%, 63%);
+
+$dark-grayish-blue: hsl(219, 12%, 42%);
+$very-dark-blue: hsl(224, 21%, 14%);
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: $very-light-grayish-blue;
+    color: $dark-grayish-blue;
+    padding: 20px 0;
+    @media (max-width: $mobile) {
+        padding: 0;
+    }
+}
+
+.paper {
+    background-color: $white;
+    max-width: $desktop * 0.507;
+    border-radius: 20px;
+    padding: 20px 30px;
+    .header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 13px;
+        margin: 30px 0;
+        .title {
+            color: $very-dark-blue;
+        }
+        .number {
+            background-color: $blue;
+            color: $white;
+            padding: 2.5px 12px;
+            border-radius: 5px;
+            font-size: calc(18rem / 16);
+            font-weight: 800;
+            &.hide {
+                display: none;
+            }
+        }
+        .empty-column {
+            flex-grow: 1;
+            @media (max-width: calc(324rem / 16)) {
+                flex-grow: 0;
+            }
+        }
+        .action-button {
+            font-size: calc(18rem / 16);
+            cursor: pointer;
+            &:hover {
+                color: $blue;
+            }
+            // font-size: 500;
+        }
+    }
+
+    .feedback {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        padding: 15px;
+        // border: 1px solid black;
+        display: flex;
+        &.unread {
+            background-color: $very-light-grayish-blue;
+        }
+        .avatar {
+            margin-right: 20px;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .content {
+            flex-grow: 1;
+            .info {
+                margin-bottom: 6px;
+                & > * {
+                    display: inline;
+                    margin-right: 5px;
+                }
+                .name {
+                    color: $very-dark-blue;
+                    cursor: pointer;
+                    font-weight: 800;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+                .action {}
+                .post {
+                    font-weight: 800;
+                    cursor: pointer;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+                .group {
+                    color: $blue;
+                    font-weight: 800;
+                    cursor: pointer;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+                .red-dot {
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 50%;
+                    background-color: $red;
+                    display: inline-block;
+                    &.hide {
+                        display: none;
+                    }
+                }
+            }
+            .time {
+                color: $grayish-blue;
+                margin-bottom: 10px;
+            }
+            .message {
+                padding: 20px;
+                border: 1px solid $light-grayish-blue-2;
+                cursor: pointer;
+                &:hover {
+                    background-color: $very-light-grayish-blue;
+                }
+            }
+        }
+        .picture {
+            // img {}
+            height: 50px;
+            width: 50px;
+            background-color: $red;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 0px 0px 0px 5px $light-grayish-blue-1;
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(210deg, 60%, 98%);
+  color: hsl(219deg, 12%, 42%);
+  padding: 20px 0;
+}
+@media (max-width: 23.4375rem) {
+  body {
+    padding: 0;
+  }
+}
+
+.paper {
+  background-color: hsl(0deg, 0%, 100%);
+  max-width: 45.63rem;
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+.paper .header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin: 30px 0;
+}
+.paper .header .title {
+  color: hsl(224deg, 21%, 14%);
+}
+.paper .header .number {
+  background-color: hsl(219deg, 85%, 26%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 2.5px 12px;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+.paper .header .number.hide {
+  display: none;
+}
+.paper .header .empty-column {
+  flex-grow: 1;
+}
+@media (max-width: 20.25rem) {
+  .paper .header .empty-column {
+    flex-grow: 0;
+  }
+}
+.paper .header .action-button {
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+.paper .header .action-button:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.paper .feedback {
+  margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+}
+.paper .feedback:last-child {
+  margin-bottom: 0;
+}
+.paper .feedback.unread {
+  background-color: hsl(210deg, 60%, 98%);
+}
+.paper .feedback .avatar {
+  margin-right: 20px;
+}
+.paper .feedback .avatar img {
+  width: 50px;
+  height: 50px;
+}
+.paper .feedback .content {
+  flex-grow: 1;
+}
+.paper .feedback .content .info {
+  margin-bottom: 6px;
+}
+.paper .feedback .content .info > * {
+  display: inline;
+  margin-right: 5px;
+}
+.paper .feedback .content .info .name {
+  color: hsl(224deg, 21%, 14%);
+  cursor: pointer;
+  font-weight: 800;
+}
+.paper .feedback .content .info .name:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.paper .feedback .content .info .post {
+  font-weight: 800;
+  cursor: pointer;
+}
+.paper .feedback .content .info .post:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.paper .feedback .content .info .group {
+  color: hsl(219deg, 85%, 26%);
+  font-weight: 800;
+  cursor: pointer;
+}
+.paper .feedback .content .info .group:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.paper .feedback .content .info .red-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: hsl(1deg, 90%, 64%);
+  display: inline-block;
+}
+.paper .feedback .content .info .red-dot.hide {
+  display: none;
+}
+.paper .feedback .content .time {
+  color: hsl(219deg, 14%, 63%);
+  margin-bottom: 10px;
+}
+.paper .feedback .content .message {
+  padding: 20px;
+  border: 1px solid hsl(205deg, 33%, 90%);
+  cursor: pointer;
+}
+.paper .feedback .content .message:hover {
+  background-color: hsl(210deg, 60%, 98%);
+}
+.paper .feedback .picture {
+  height: 50px;
+  width: 50px;
+  background-color: hsl(1deg, 90%, 64%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.paper .feedback .picture:hover {
+  box-shadow: 0px 0px 0px 5px hsl(211deg, 68%, 94%);
+}
+
+/*# sourceMappingURL=style.css.map */
